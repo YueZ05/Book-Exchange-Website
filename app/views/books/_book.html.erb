@@ -1,0 +1,28 @@
+<%if book.for_sale == true %>
+<li id="book-<%= book.id %>">
+  <div class="book_info">
+  <span class="book_left">
+    <%= link_to (image_tag "book_pic.jpg",size: 80), book %>
+  </span>
+
+  <span class="book_left">
+    <div class="title"><%= link_to book.title, book %></div>
+    <div class="class_name">for <%= book.class_name %></div>
+    <div class="author">by <%= book.author %></div>
+    <div class="ISBN">ISBN: <%= book.ISBN %></div>
+  </span>
+
+    <div class="price"><%= book.price %></div>
+    <div class="quantity"><%= book.quantity %> available</div>
+    <div class="condition"><%= book.condition %></div>
+    <div class="user"><%= link_to book.user.name, book.user %></div>
+    <span class="timestamp">
+      Posted <%= time_ago_in_words(book.created_at) %> ago.
+      <% if current_user?(book.user) %>
+          <%= link_to "delete", book, method: :delete,
+                      data: { confirm: "You sure?" } %>
+      <% end %>
+    </span>
+  </div>
+</li>
+<%end %>

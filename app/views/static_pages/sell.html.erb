@@ -1,0 +1,41 @@
+<% provide(:title, "Sell a Book") %>
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+<% if logged_in? %>
+    <h1>Sell a Book</h1>
+    <p>
+       This is the selling page for SYSBM's Book Exchange project!
+    </p>
+
+    <div class="row">
+      <aside class="col-md-4">
+        <section class="user_info">
+          <%= render 'shared/user_info' %>
+        </section>
+        <section class="stats">
+          <%= render 'shared/stats' %>
+        </section>
+        <section class="book_form">
+          <%= render 'shared/book_form' %>
+        </section>
+      </aside>
+      <div class="col-md-8">
+        <h3>Book List</h3>
+        <%= render 'shared/feed' %>
+      </div>
+    </div>
+
+<% else %>
+    <h1>Unauthorized User</h1>
+    <p>
+       You must <%= link_to "log in", login_path %> before you can sell books!
+    </p>
+<% end %>
+  </body>
+</html>
+
+

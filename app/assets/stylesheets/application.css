@@ -1,0 +1,86 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap";
+
+body {
+    background-color: white;
+}
+
+.navbar{
+    background-color: #333333;
+    border-color: #bb0000;
+    border-bottom-width: 15px;
+}
+
+.navbar .navbar-nav > li > a{
+    color: white;
+    font-size: 15px;
+}
+
+.btn-primary{
+    background-color: #bb0000;
+    color: white;
+}
+
+.btn-primary:hover{
+    color: white;
+    background-color: #bb0000;
+}
+
+.btn-primary:active{
+    color: white;
+    background-color: #bb0000;
+}
+
+
+btn{
+    background-color: #bb0000;
+    color:white;
+}
+
+a, a:visited{
+    color: inherit;
+}
+
+a:hover{
+    color: #bb0000;
+    font-weight: bold;
+    background-color: white;
+}
+
+.large_img img{
+    height: auto;
+    width: auto;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.small_img img{
+    height: auto;
+    width: auto;
+    float: left;
+    margin-left: -245px;
+    max-width: 40px;
+    max-height: 40px;
+}
+
+a#logo:hover{
+    background-color: #333333;
+}
+
+
+

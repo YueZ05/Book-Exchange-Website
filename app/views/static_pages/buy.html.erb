@@ -1,0 +1,62 @@
+<% provide(:title, "Buy a Book") %>
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<p>
+
+  <body>
+
+  <h1>Buy a Book</h1>
+<p>
+
+<h3>Search by book title, author, ISBN or class name: </h3>
+<%= form_for "", url:'buy', role: "search", method: :get do %>
+  <%= text_field_tag :search, @search_term, placeholder: "search..." %>
+<% end %>
+
+
+<div class="top_bar">
+  <div class="sort">
+    <p>Sort by price</p>
+    <ul>
+      <li><%= link_to "lowest to highest", buy_path(:filter => params[:filter], :sort => "price_asc", :search => params[:search])%></li>
+      <li><%= link_to "highest to lowest", buy_path(:filter => params[:filter], :sort => "price_desc", :search => params[:search])%></li>
+      <li><%= link_to "Clear sorter", buy_path(:filter => params[:filter], :sort => "clear", :search => params[:search])%></li>
+    </ul>
+  </div>
+  <div class="filter">
+    <p>Filter by condition </p>
+    <ul>
+      <li><%= link_to "New", buy_path(:filter => "New", :search => params[:search], :sort =>params[:sort])%></li>
+      <li><%= link_to "Used - Like New or Open Box", buy_path(:filter => "Used - Like New or Open Box", :search => params[:search], :sort =>params[:sort])%></li>
+      <li><%= link_to "Used - Very Good", buy_path(:filter => "Used - Very Good", :search => params[:search], :sort =>params[:sort])%></li>
+      <li><%= link_to "Used - Good", buy_path(:filter => "Used - Good", :search => params[:search], :sort =>params[:sort])%></li>
+      <li><%= link_to "Used - Acceptable", buy_path(:filter => "Used - Acceptable", :search => params[:search], :sort =>params[:sort])%></li>
+      <li><%= link_to "Clear filter", buy_path(:filter => "clear", :search => params[:search], :sort =>params[:sort])%></li>
+    </ul>
+  </div>
+</div>
+
+<div class="all_book">
+
+
+  <%= will_paginate @books%>
+
+  <ul class="books">
+    <%= render @books %>
+  </ul>
+
+  <%= will_paginate @books%>
+</div>
+
+
+
+
+
+</p>
+</body>
+</html>
+

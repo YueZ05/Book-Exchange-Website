@@ -1,0 +1,86 @@
+
+
+li .book_info {
+  text-align:right;
+
+  .price{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .book_left {
+    float:left;
+    text-align:left;
+
+
+    .title{
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .class_name{
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+
+
+
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+
+div.sort{
+  float:left;
+  text-align: left;
+  padding: 20px;
+  width: 50%;
+  height: 180px;
+  border: 2px solid #bb0000;
+  border-left: 6px solid #bb0000;
+  border-radius: 12px;
+}
+
+div.filter{
+  float:right;
+  text-align: left;
+  padding: 20px;
+  width: 49%;
+  height: 180px;
+  border: 2px solid #bb0000;
+  border-left: 6px solid #bb0000;
+  border-radius: 12px;
+}
+
+
+div.all_book{
+  padding:190px 1px 1px;
+}
+
+div.top_bar{
+  font-size: 15px;
+  padding:1px;
+
+
+  ul{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+  }
+
+  p{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+
+
+}

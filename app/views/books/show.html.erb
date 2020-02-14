@@ -1,0 +1,68 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+<div class="col-md-8">
+<span>
+    <%= image_tag "book_pic.jpg",size: 80%>
+</span>
+
+<span>
+<p style="font-size: 2.5em">
+  <strong>
+  <%= @book.title %></strong>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+
+<p>
+  <strong>ISBN:</strong>
+  <%= @book.ISBN %>
+</p>
+
+<p>
+  <strong>Class name:</strong>
+  <%= @book.class_name %>
+</p>
+
+
+<p>
+  <strong>Price:
+  <%= @book.price %></strong>
+</p>
+
+<p>
+  <strong>Condition:</strong>
+  <%= @book.condition %>
+</p>
+
+  <p>
+  <strong>Quantity:</strong>
+    <%= @book.quantity %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @book.description %>
+</p>
+
+</span>
+</div>
+
+
+
+  <aside class="col-md-4">
+  <section class="user_info">
+    <h1>
+      <%= link_to gravatar_for @user, @book.user %>
+      <%= link_to @user.name, @book.user %>
+    </h1>
+    <p><%=@user.email %></p>
+  </section>
+</aside>
+
+</div>
+
+

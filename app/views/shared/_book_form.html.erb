@@ -1,0 +1,23 @@
+
+<%= form_for(@book) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+    <label for="title"> Title :</label>
+    <%= f.text_area :title, placeholder: "Enter book title...", class: 'form-control' %>
+    <label for="author"> Author:</label>
+    <%= f.text_area :author, placeholder: "Enter book author...",class: 'form-control' %>
+    <label for="ISBN"> ISBN:</label>
+    <%= f.text_area :ISBN, maxlength: 13, minlength: 13,placeholder: "Enter book ISBN...",class: 'form-control'%>
+    <label for="ISBN"> Class Name:</label>
+    <%= f.text_area :class_name, placeholder: "Enter book ISBN...",class: 'form-control' %>
+    <label for="price"> Price:</label>
+    <%= f.number_field :price, min: 0, step: 0.01, pattern: "^\d*(\.\d{0,2})?$", placeholder: "Enter book price...",class: 'form-control' %>
+    <label for="condition"> Condition:</label>
+    <%= f.select :condition, [ 'New', 'Used - Like New or Open Box', 'Used - Very Good', 'Used - Good', 'Used - Acceptable' ], :prompt => 'Select One',class: 'form-control' %>
+    <label for="quantity"> Quantity:</label>
+    <%= f.number_field :quantity, min: 1, placeholder: "Enter book quantity..." ,class: 'form-control'%>
+    <label for="description"> Description:</label>
+    <%= f.text_area :description, placeholder: "Enter book description...",class: 'form-control' %>
+
+    <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>

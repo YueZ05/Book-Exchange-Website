@@ -33,5 +33,3 @@ Uses cookies to remember user's details between log in sessions but goes through
 ## Search
 SYSBM has implemented a complex search that allows users to search by book name, class code, author, or ISBN. Users then can sort the results by price from low to high or high to low. The searches can be further filtered by searching for a specific condition.
 
-# Want to know more?
-From entity relationship diagrams and relational schema, to obstacles and future goals of the site, visit our [slides](https://docs.google.com/presentation/d/13SV4jbKFbYaTxbrMFARRzJaMyY737J0y3MBWxCVn0pg/edit?usp=sharing). 

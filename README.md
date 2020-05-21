@@ -31,5 +31,5 @@ Protect our users from dangerous others by only allowing users to sign up with t
 Uses cookies to remember user's details between log in sessions but goes through many ways to try and protect the cookies. To read more about how we protect our users cookies, see our presentation [slides](https://docs.google.com/presentation/d/13SV4jbKFbYaTxbrMFARRzJaMyY737J0y3MBWxCVn0pg/edit?usp=sharing)
 
 ## Search
-SYSBM has implemented a complex search that allows users to search by book name, class code, author, or ISBN. Users then can sort the results by price from low to high or high to low. The searches can be further filtered by searching for a specific condition.
+A complex search has been implemented that allows users to search by book name, class code, author, or ISBN. Users then can sort the results by price from low to high or high to low. The searches can be further filtered by searching for a specific condition.
 

@@ -1,4 +1,4 @@
-# final-project-sysbm
+# Book-Exchange-Website
 
 ## How To Run
 First, download all of the files into one directory, then use cd to go to the directory where you downloaded them.
